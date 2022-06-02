@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
 
+## Terminal Commands to start 
+
+1. Install NodeJs from [NodeJs Official Page](https://nodejs.org/en).
+2. Open Terminal
+3. Go to your file project (that is - cd/test-app)
+4. Run in terminal: ```npm install -g @angular/cli```
+5. Then: ```npm install``` (or) ```sudo npm install```
+6. And: ```ng serve```
+7. Navigate to [localhost:4200](localhost:4200)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
