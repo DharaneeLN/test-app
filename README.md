@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 4. Run in terminal: ```npm install -g @angular/cli```
 5. Then: ```npm install``` (or) ```sudo npm install```
 6. And: ```ng serve```
-7. Navigate to [localhost:4200](localhost:4200)
+7. Navigate to http://localhost:4200/
 
 ## Development server
 
