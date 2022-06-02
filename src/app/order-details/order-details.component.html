@@ -1,0 +1,10 @@
+<button mat-icon-button class="close-button" [mat-dialog-close]="true">
+  <mat-icon class="close-icon" color="warn">close</mat-icon>
+</button>
+<h1 mat-dialog-title>Hi {{ data.name }}</h1>
+<div mat-dialog-content class="my-full-screen-dialog">
+  No order details available
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data.id" cdkFocusInitial>Ok</button>
+</div>

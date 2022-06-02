@@ -1,0 +1,12 @@
+<div class="container-fluid" #parent>
+  <mat-list>
+    <mat-list-item *ngFor="let name of customerNames">
+      <div mat-line> {{name.name | uppercase}} </div>
+      <div mat-line>
+        <button mat-raised-button color="primary"
+        (click)="openOrderDetails(name, parent.clientWidth, parent.clientHeight)">Order Details</button>
+      </div>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</div>
