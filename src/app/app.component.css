@@ -2,20 +2,33 @@ h1 {
   margin-bottom: 0;
 }
 nav a {
-  padding: 1rem;
   text-decoration: none;
   color: #FFF;
+  margin-left: 0.5rem;
 }
 
-nav a:hover {
-  color: #000;
-  background-color: #FFF;
+nav .nav-item > a:hover {
+  font-weight: bold;
+  text-decoration: underline !important;
+  color: #FFF !important;
+  font-weight: 300;
 }
 
 .nav-item {
   margin: 0.5rem;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 19px;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: #FFF !important;
 }
 
 .active {
-  color: black !important;
+  color: #FFF !important;
+  font-weight: 500 !important;
+  text-decoration: underline !important;
 }

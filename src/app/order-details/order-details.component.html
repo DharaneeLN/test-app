@@ -1,10 +1,10 @@
 <button mat-icon-button class="close-button" [mat-dialog-close]="true">
   <mat-icon class="close-icon" color="warn">close</mat-icon>
 </button>
-<h1 mat-dialog-title>Hi {{ data.name }}</h1>
+<h1 mat-dialog-title>Hi <span class="fst-italic"> {{ dialogData.data.name }}</span></h1>
 <div mat-dialog-content class="my-full-screen-dialog">
-  No order details available
+ <p> Your Order ID is <b>{{ dialogData.data.id }}</b> </p>
 </div>
 <div mat-dialog-actions>
-  <button mat-button [mat-dialog-close]="data.id" cdkFocusInitial>Ok</button>
+  <button mat-button [mat-dialog-close]="dialogData.data.id" cdkFocusInitial>Close</button>
 </div>

@@ -1,17 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatButtonModule } from '@angular/material/button';
-import { MatListModule } from '@angular/material/list';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
+
 import { HomeComponent } from './home/home.component';
 import { CustomersListComponent } from './customers-list/customers-list.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { CustomerService } from './customers-list/customer.service';
+import { HomeService } from './home/home.service';
 
 @NgModule({
   declarations: [
@@ -24,13 +24,11 @@ import { CustomerService } from './customers-list/customer.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MatDialogModule,
-    MatChipsModule,
-    MatListModule,
-    MatButtonModule
+    FormsModule,
+    MaterialModule,
+    AngularMultiSelectModule
   ],
-  providers: [CustomerService],
+  providers: [CustomerService, HomeService],
   entryComponents: [OrderDetailsComponent],
   bootstrap: [AppComponent]
 })

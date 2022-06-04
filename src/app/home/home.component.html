@@ -1,1 +1,80 @@
-<p>home works!</p>
+<blockquote class="blockquote text-center fst-italic ">
+  <span class="text-decoration-underline">Problem:</span>
+  <span class="m-1 ">Page hangs when dropdown has large data set</span>
+</blockquote>
+<div class="container d-flex">
+  <div class="col-md-6 m-1">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title class="fw-normal">
+          <span class="text-decoration-underline">Solution 1:</span>
+          <span class="m-1">Using Infinte scroll</span>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-md-12">
+            <angular2-multiselect
+              #dropdownElem
+              [data]="itemListForScroll"
+              [(ngModel)]="selectedItemForScroll"
+              [settings]="settingsForScroll"
+              (onSelect)="onItemSelect($event)"
+              (onDeSelect)="OnItemDeSelect($event)"
+              (onSelectAll)="onSelectAll($event)"
+              (onDeSelectAll)="onDeSelectAll($event)"
+            >
+            </angular2-multiselect>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 pt-5">
+            <h3 class="text-success">
+              Selected Name: {{ selectedItemForScroll[0]?.itemName }}
+            </h3>
+          </div>
+          <div class="col-md-12">
+            <h3 class="text-danger">
+              Total Records: {{ itemListForScroll.length }}
+            </h3>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-md-6 m-1">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title class="fw-normal">
+          <span class="text-decoration-underline">Solution 2:</span>
+          <span class="m-1 ">Using Lazy Loading</span>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-md-12">
+            <angular2-multiselect
+              [data]="itemListForLoader"
+              [(ngModel)]="selectedItemsForLoader"
+              [settings]="settingsForLoader"
+              [loading]="loading"
+              (onSelect)="onItemSelect($event)"
+              (onDeSelect)="OnItemDeSelect($event)"
+              (onSelectAll)="onSelectAll($event)"
+              (onDeSelectAll)="onDeSelectAll($event)"
+              (onScrollToEnd)="fetchMore($event)"
+            >
+            </angular2-multiselect>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 pt-5">
+            <h3 class="text-success text-bold">
+              Total Records : {{ itemListForLoader.length }}
+            </h3>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

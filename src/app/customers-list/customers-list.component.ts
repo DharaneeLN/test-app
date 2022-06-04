@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { OrderDetailsComponent } from '../order-details/order-details.component';
 import { CustomerService, Name } from './customer.service';
@@ -11,7 +11,7 @@ import { CustomerService, Name } from './customer.service';
 export class CustomersListComponent implements OnInit {
 
   customerNames: Name[] = [];
-
+  
   constructor(public dialog: MatDialog, private customerService: CustomerService) { }
 
   ngOnInit(): void {
@@ -25,10 +25,15 @@ export class CustomersListComponent implements OnInit {
 
   openOrderDetails(selectedName: any, width: any, height: any): void {
     console.log('open dialog', selectedName);
+    const dialogData = {
+      data: selectedName,
+      width: width + 'px',
+      height: height + 'px',
+    };
     const dialogRef = this.dialog.open(OrderDetailsComponent, {
       width: width + 'px',
       height: height + 'px',
-      data: selectedName,
+      data: dialogData,
     });
 
     dialogRef.afterClosed().subscribe(result => {

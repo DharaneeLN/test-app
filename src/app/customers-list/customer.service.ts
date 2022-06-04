@@ -7,15 +7,22 @@ export interface Name {
 }
 
 export const NAMES: Name[] = [
-  { id: 0, name: 'Andy Allen' },
-  { id: 1, name: 'Ganesh' },
+  { id: 100, name: 'Andy Allen' },
+  { id: 151, name: 'Ganesh' },
   { id: 2, name: 'Rio' },
-  { id: 3, name: 'Mohammed Sheikh' },
-  { id: 4, name: 'Santhosh Palani' },
+  { id: 215, name: 'Mohammed Sheikh' },
+  { id: 403, name: 'Santhosh Palani' },
   { id: 5, name: 'Kalyani Pramod' },
-  { id: 6, name: 'Alicia Dsouza' },
-  { id: 7, name: 'Gopinath' },
-  { id: 8, name: 'Padma Rajesh' }
+  { id: 46, name: 'Alicia Dsouza' },
+  { id: 72, name: 'Gopinath' },
+  { id: 88, name: 'Padma Rajesh' },
+  { id: 19, name: 'White' },
+  { id: 170, name: 'Jake' },
+  { id: 11, name: 'Kimberely' },
+  { id: 122, name: 'Eric' },
+  { id: 183, name: 'Scott' },
+  { id: 174, name: 'Kylie' },
+  { id: 51, name: 'Sam Vishal' }
 ];
 
 @Injectable({

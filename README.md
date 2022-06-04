@@ -23,6 +23,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Commands to install libraries
 ng add @angular/material
 npm install --save bootstrap jquery popper.js
+npm install angular2-multiselect-dropdown --save
 
 
 ## Further help
